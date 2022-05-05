@@ -1,4 +1,5 @@
-# NLP-DataCamp-Courses
+# NLP-Basics
+
 Contains Notes and Codes realted to DataCamp NLP course.
 Let's Start with our First Course: 
 
