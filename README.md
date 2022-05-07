@@ -24,9 +24,9 @@ Let's Start with our First Course:
 |pattern|matches|example|
 |---|---|---|
 |\w+|word|'Magic'|
-|\d|digit|'Magic'|
-|\s|space|'Magic'|
-|\S|No space|'Magic'|
+|\d|digit|9|
+|\s|space|' '|
+|\S|No space|''|
 |+ or \*|greedy match|'aaaaaa'|
 |.\*|wildcard|'username87'|
 |\[a-z\]|lowercase group|'abcdef'| 
@@ -43,7 +43,43 @@ The output of these can be regulated and found as objects or iterators etc.
 
 ## Introduction to Tokenization
 
-It is the process of converting a string or documents into smaller chunks known as tokens. There are certain rules for tokenising the words. 
+It is the process of converting a string or documents into smaller chunks known as tokens. There are certain rules for tokenising the words.
+
+The python library `nltk` is used for it.
+
+Why tokenise?
+- Easier mapping of parts of speech
+- Matching Common Words
+- Removing unwanted tokens
+
+
+## Advanced Tokenization
+
+|pattern|matches|example|
+|---|---|---|
+|\||OR|`\d\|\w` macthes words or digit|
+|A-Za-z+|Upper and Lower alphabets|'ABCdef'|
+|0-9|Numbers|9|
+|A-Za-a\-\.|Upper case and lower case and - and .|google-in.com|
+|(a-z)|a,- and z|a-z|
+|(\s+|,)|spaces and comma|' ,'|
+
+## Word counts with bag-of-words
+
+Bag of words is a basic method for finding topics in a text.
+The steps include:
+- Tokenize the words
+- Count the frequency of each token
+- More the frequency, more central it is to the meaning of the sentence.
+
+For better input it is important to preprocess the text.  
+Some preprocessing are:
+- Tokenization
+- Lowering Case
+- Lemmatization/Stemming
+- Removing Stop words, punctuations and unwanted tokens
+
+
 
 Moving to our second course
 
